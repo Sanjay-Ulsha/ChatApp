@@ -10,7 +10,6 @@ public class Server implements ActionListener
 	static Socket s2; static ServerSocket s1;
 	static DataInputStream in;
 	static DataOutputStream out;
-	static BufferedReader br;
 	static String min="",mout="";
 	Server()
 	{
@@ -52,8 +51,6 @@ public class Server implements ActionListener
 			
 			in=new DataInputStream(s2.getInputStream());
 			out=new DataOutputStream(s2.getOutputStream());
-			
-			br=new BufferedReader(new InputStreamReader(System.in));
 			
 			while(true)
 			{
