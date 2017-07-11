@@ -10,7 +10,6 @@ public class Client implements ActionListener
 	static Socket s2;
 	static DataInputStream in;
 	static DataOutputStream out;
-	static BufferedReader br;
 	static String min="",mout="";
 	Client()
 	{
@@ -51,8 +50,6 @@ public class Client implements ActionListener
 			
 			in=new DataInputStream(s2.getInputStream());
 			out=new DataOutputStream(s2.getOutputStream());
-			
-			br=new BufferedReader(new InputStreamReader(System.in));
 			
 			while(true)
 			{
